@@ -22,7 +22,10 @@ ListView buildPredsList(data) {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("Word"),
-              Text("Classification"),
+              Text(
+                "Classification",
+                maxLines: 2,
+              ),
             ],
           ),
         );
@@ -36,7 +39,11 @@ ListView buildPredsList(data) {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(keys[index]),
-            Text(data[keys[index]]),
+            Text(
+              data[keys[index]],
+              maxLines: 2,
+              overflow: TextOverflow.visible,
+            ),
           ],
         ),
       );
