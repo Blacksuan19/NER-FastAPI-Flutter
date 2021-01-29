@@ -3,11 +3,11 @@ import 'package:hooks_riverpod/all.dart';
 import 'package:dio/dio.dart';
 
 // API provider
-final aPIProvider = ChangeNotifierProvider<API>((ref) => API());
+final apiProvider = ChangeNotifierProvider<API>((ref) => API());
 
 // API response provider
 final responseProvider = FutureProvider.autoDispose((ref) async {
-  return ref.watch(aPIProvider).response.data;
+  return ref.watch(apiProvider).response.data;
 });
 
 class API extends ChangeNotifier {

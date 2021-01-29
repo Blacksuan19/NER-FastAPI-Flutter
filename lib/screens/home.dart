@@ -22,8 +22,8 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     // set initial response
-    if (context.read(aPIProvider).response == null) {
-      context.read(aPIProvider).classifyText(text: "Ali is cooking");
+    if (context.read(apiProvider).response == null) {
+      context.read(apiProvider).classifyText(text: "Ali is cooking");
     }
     return Scaffold(
       appBar: AppBar(
@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
                       _showErr = false;
                     });
                     context
-                        .read(aPIProvider)
+                        .read(apiProvider)
                         .classifyText(text: inputController.text);
                   } else {
                     setState(() {
