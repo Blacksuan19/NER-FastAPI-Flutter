@@ -53,7 +53,6 @@ Consumer buildConsumer() {
     return res.when(
       data: (data) {
         // handle returned error
-        print(data);
         if (data['detail'] != null) {
           return FittedBox(
             child: Row(

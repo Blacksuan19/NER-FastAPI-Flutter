@@ -1,26 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
 import '../widgets/api_widgets.dart';
 import '../widgets/material_button.dart';
 import '../api.dart';
 
-class Home extends StatefulWidget {
+class Home extends StatefulHookWidget {
   @override
   _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
   bool _showErr = false;
-  final inputController = TextEditingController();
-
-  @override
-  void dispose() {
-    inputController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
+    final inputController = useTextEditingController();
     // set initial response
     if (context.read(apiProvider).response == null) {
       context.read(apiProvider).classifyText(text: "Ali is cooking");

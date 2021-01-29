@@ -7,7 +7,7 @@ A flutter application for my [Named Entity Recognition API](https://github.com/B
 
 ## Directory structure
 
-<pre>
+```sh
 lib
 ├── api.dart
 ├── main.dart
@@ -16,7 +16,7 @@ lib
 └── widgets
     ├── api_widgets.dart
     └── material_button.dart
-</pre>
+```
 
 ## Screenshots
 
